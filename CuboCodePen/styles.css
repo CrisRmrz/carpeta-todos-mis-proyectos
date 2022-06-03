@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+:root{
+  --extra-light-yellow: #FFDE93;
+  --light-yellow:#ffd166;
+  --dark-yellow: #FFB60C;
+  --medium-yellow:#FFBD25; 
+  --bg-light:#264653;
+  --bg-dark:#182D35;
+  --bg-extra-dark: #0F1C21;
+  --m-cube: 200px;
+}
+
+body {
+  background:radial-gradient(var(--bg-light), var(--bg-dark));
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.main {
+  width: var(--m-cube);
+  height: var(--m-cube);
+  position:relative;
+  transform-style: preserve-3d;
+  animation: twirl 10s ease infinite;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(var(--medium-yellow), var(--light-yellow));
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transform: rotateX(calc(90deg * var(--x))) rotateY(calc(90deg * var(--i))) translateZ(calc(100px * var(--j))) ;
+}
+.face#top{
+  background:var(--dark-yellow);
+}
+.face#shadow{
+  background: radial-gradient(var(--extra-light-yellow), var(--light-yellow));
+  filter: blur(30px);
+}
+
+.face>p{
+  font-family: 'Geostar Fill', cursive;
+  font-size:140px;
+  margin:0;
+  animation: blinck 2s ease infinite;
+}
+
+.social-media{
+    position:absolute;
+    transform: translate(-50%, -50%);
+    top:calc(50% + 230px);
+    left:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: var(--bg-extra-dark);
+    font-family:'Montserrat', sans-serif;
+    font-size:14px;
+    font-weight: bolder;
+}
+    .social-media>p{
+        margin-right: 20px;
+    }
+    .social-media>a{
+        color: var(--bg-extra-dark);
+        font-size: 20px;
+        margin-right: 10px;
+    }
+        .social-media>a:hover{
+            color: var(--light-yellow);
+            transform: scale(1.2);
+        }
+@keyframes twirl{
+  0%{
+    transform: rotateX(-25deg) rotateY(45deg) ;
+  }
+  100%{
+    transform:  rotateX(-25deg) rotateY(405deg);
+  }
+}
+@keyframes blinck{
+  0%{
+    color: rgba(255,255,255,.5);
+  }
+  50%{
+    color: rgba(255,255,255,1);
+    text-shadow: 0 0 20px white;
+  }
+  100%{
+    color: rgba(255,255,255,.5);
+  }
+}

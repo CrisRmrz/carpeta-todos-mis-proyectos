@@ -1,0 +1,125 @@
+h1 {
+  background-color: cadetblue;
+}
+
+/* color variables */
+/* border-radius */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial, sans-serif";
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ff7043;
+}
+
+.wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+.wrapper button {
+  font-family: inherit;
+  outline: none;
+  border: none;
+  background-color: white;
+  padding: 1rem;
+  width: 4rem;
+  height: 4rem;
+  -webkit-box-shadow: 0px 0px 5px #767b91;
+          box-shadow: 0px 0px 5px #767b91;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.wrapper button svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #4f546c;
+  -webkit-transition: 500ms -webkit-transform cubic-bezier(0.785, 0.18, 0.415, 1.65);
+  transition: 500ms -webkit-transform cubic-bezier(0.785, 0.18, 0.415, 1.65);
+  transition: 500ms transform cubic-bezier(0.785, 0.18, 0.415, 1.65);
+  transition: 500ms transform cubic-bezier(0.785, 0.18, 0.415, 1.65), 500ms -webkit-transform cubic-bezier(0.785, 0.18, 0.415, 1.65);
+}
+
+.wrapper button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.wrapper .add {
+  z-index: 99;
+  -webkit-transition: 500ms -webkit-transform cubic-bezier(0.785, 0.18, 0.415, 1.65);
+  transition: 500ms -webkit-transform cubic-bezier(0.785, 0.18, 0.415, 1.65);
+  transition: 500ms transform cubic-bezier(0.785, 0.18, 0.415, 1.65);
+  transition: 500ms transform cubic-bezier(0.785, 0.18, 0.415, 1.65), 500ms -webkit-transform cubic-bezier(0.785, 0.18, 0.415, 1.65);
+}
+
+.wrapper .linkedin,
+.wrapper .instagram {
+  position: relative;
+  bottom: -6rem;
+  opacity: 0;
+  -webkit-transform: rotatez(-45deg);
+          transform: rotatez(-45deg);
+  -webkit-transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+  transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+  pointer-events: none;
+}
+
+.wrapper-open .linkedin,
+.wrapper-open .instagram {
+  opacity: 1;
+  bottom: 0;
+  -webkit-transform: rotatez(0deg);
+          transform: rotatez(0deg);
+  pointer-events: auto;
+}
+
+.wrapper-open .linkedin::after,
+.wrapper-open .instagram::after {
+  content: attr(class);
+  position: absolute;
+  left: 5rem;
+  top: 50%;
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
+  color: white;
+  background-color: #4f546c;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  pointer-events: none;
+  display: none;
+}
+
+.wrapper-open .linkedin:hover::after,
+.wrapper-open .instagram:hover:after {
+  display: block;
+}
+
+.wrapper-open .add svg {
+  -webkit-transform: rotatez(135deg);
+          transform: rotatez(135deg);
+}
+/*# sourceMappingURL=styles.css.map */
