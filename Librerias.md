@@ -27,3 +27,5 @@ https://gist.github.com/rxaviers/7360908  markdown emojis
 https://reqres.in/ regres a hosted post
 
 npm i validator https://www.npmjs.com/package/validator
+
+https://www.toptal.com/developers/css3maker/css3-rgba colores gradientes
