@@ -29,3 +29,5 @@ https://reqres.in/ regres a hosted post
 npm i validator https://www.npmjs.com/package/validator
 
 https://www.toptal.com/developers/css3maker/css3-rgba colores gradientes
+
+https://www.npmjs.com/package/prop-types propTypes
