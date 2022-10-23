@@ -33,3 +33,5 @@ https://www.toptal.com/developers/css3maker/css3-rgba colores gradientes
 https://www.npmjs.com/package/prop-types propTypes
 
 https://yarnpkg.com/package/querystring para manejar los query parameters del URL
+
+https://www.npmjs.com/package/uuid Generador de ids
