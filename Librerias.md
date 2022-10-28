@@ -35,3 +35,5 @@ https://www.npmjs.com/package/prop-types propTypes
 https://yarnpkg.com/package/querystring para manejar los query parameters del URL
 
 https://www.npmjs.com/package/uuid Generador de ids
+
+https://www.npmjs.com/package/dotenv   para las variables de entorno  o los .env
